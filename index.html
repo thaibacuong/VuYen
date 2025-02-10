@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi" bbai-tooltip-injected="true">
 
 <head>
     <meta charset="UTF-8">
@@ -130,8 +130,6 @@
         ul,
         var,
         video {
-            max-width: 100%;
-            height: auto;
             margin: 0;
             padding: 0;
             border: 0;
@@ -361,7 +359,7 @@
             right: 15px;
             bottom: 10px;
             margin: 0 auto;
-            padding: 10px 0px;
+            padding: 10px 0;
             border: none;
             width: 80px;
             text-transform: uppercase;
@@ -411,7 +409,7 @@
         }
 
         body {
-            font-size: 1rem;
+            font-size: 12px;
             -ms-text-size-adjust: none;
             -moz-text-size-adjust: none;
             -o-text-size-adjust: none;
@@ -474,10 +472,6 @@
             position: relative;
             margin: 0 auto;
             height: 100%;
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            /* padding: 10px; */
         }
 
         .ladi-overlay {
@@ -498,7 +492,6 @@
                 opacity: 0;
             }
         }
-
 
         .ladi-section {
             margin: 0 auto;
@@ -1903,7 +1896,7 @@
 
         .ladi-wraper {
             margin: 0 auto;
-            width: 100%;
+            width: 420px;
         }
 
         @font-face {
@@ -3664,7 +3657,7 @@
 
         #HEADLINE30>.ladi-headline {
             font-family: Oswald, sans-serif;
-            font-size: 40.72px;
+            font-size: 30.72px;
             font-style: italic;
             line-height: 1.6;
             color: rgb(84, 84, 84);
@@ -4050,34 +4043,6 @@
 </head>
 
 <body class="">
-    <!-- <form id="weddingForm">
-        <input type="text" name="name" placeholder="Họ và Tên" required>
-        <textarea name="message" placeholder="Lời nhắn" required></textarea>
-        <input type="text" name="form_item6" placeholder="Bạn là gì của Dâu Rể?" required>
-        <input type="text" name="form_item7" placeholder="Lời chúc?" required>
-        <button type="submit">Gửi</button>
-    </form>
-
-    <script>
-        document.getElementById("weddingForm").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            var formData = new FormData(this);
-            var object = {};
-            formData.forEach((value, key) => object[key] = value);
-
-            fetch("https://script.google.com/macros/s/AKfycbyjW2BRzx-r9iZL8tzFdR3VTk94KvOquH3bkcM4naHY2C5SqN3wrgVwWp0NWeo-ljLgDQ/exec", {
-                method: "POST",
-                body: JSON.stringify(object),
-                headers: { "Content-Type": "application/json" }
-            })
-                .then(response => response.text())
-                .then(data => alert(data))  // Hiển thị phản hồi từ server
-                .catch(error => console.error("Lỗi:", error));
-        });
-
-    </script> -->
-
     <div class="ladi-wraper">
         <div id="SECTION1" class="ladi-section">
             <div class="ladi-section-background"></div>
@@ -4432,14 +4397,14 @@
                 <div id="HEADLINE77" class="ladi-element">
                     <h3 class="ladi-headline">29<br></h3>
                 </div>
-                <div id="GALLERY1" class="ladi-element" data-max-item="18" data-runtime-id="ULSNoiuncT" data-current="1"
-                    data-is-next="true" data-scrolled="true" data-loaded="true" data-next-time="1739169445239">
+                <div id="GALLERY1" class="ladi-element" data-max-item="18" data-runtime-id="ULSNoiuncT" data-current="9"
+                    data-is-next="true" data-scrolled="true" data-loaded="true" data-next-time="1739177206245">
                     <div class="ladi-gallery ladi-gallery-bottom">
                         <div class="ladi-gallery-view" style="cursor: pointer;">
                             <div class="ladi-gallery-view-arrow ladi-gallery-view-arrow-left"></div>
                             <div class="ladi-gallery-view-arrow ladi-gallery-view-arrow-right"></div>
                             <div class="ladi-gallery-view-item" data-index="0"></div>
-                            <div class="ladi-gallery-view-item selected" data-index="1"></div>
+                            <div class="ladi-gallery-view-item" data-index="1"></div>
                             <div class="ladi-gallery-view-item" data-index="2"></div>
                             <div class="ladi-gallery-view-item" data-index="3"></div>
                             <div class="ladi-gallery-view-item" data-index="4"></div>
@@ -4447,7 +4412,7 @@
                             <div class="ladi-gallery-view-item" data-index="6"></div>
                             <div class="ladi-gallery-view-item" data-index="7"></div>
                             <div class="ladi-gallery-view-item" data-index="8"></div>
-                            <div class="ladi-gallery-view-item" data-index="9"></div>
+                            <div class="ladi-gallery-view-item selected" data-index="9"></div>
                             <div class="ladi-gallery-view-item" data-index="10"></div>
                             <div class="ladi-gallery-view-item" data-index="11"></div>
                             <div class="ladi-gallery-view-item" data-index="12"></div>
@@ -4458,9 +4423,9 @@
                             <div class="ladi-gallery-view-item" data-index="17"></div>
                         </div>
                         <div class="ladi-gallery-control">
-                            <div class="ladi-gallery-control-box" style="left: 0px;">
+                            <div class="ladi-gallery-control-box" style="left: -640px;">
                                 <div class="ladi-gallery-control-item" data-index="0"></div>
-                                <div class="ladi-gallery-control-item selected" data-index="1"></div>
+                                <div class="ladi-gallery-control-item" data-index="1"></div>
                                 <div class="ladi-gallery-control-item" data-index="2"></div>
                                 <div class="ladi-gallery-control-item" data-index="3"></div>
                                 <div class="ladi-gallery-control-item" data-index="4"></div>
@@ -4468,7 +4433,7 @@
                                 <div class="ladi-gallery-control-item" data-index="6"></div>
                                 <div class="ladi-gallery-control-item" data-index="7"></div>
                                 <div class="ladi-gallery-control-item" data-index="8"></div>
-                                <div class="ladi-gallery-control-item" data-index="9"></div>
+                                <div class="ladi-gallery-control-item selected" data-index="9"></div>
                                 <div class="ladi-gallery-control-item" data-index="10"></div>
                                 <div class="ladi-gallery-control-item" data-index="11"></div>
                                 <div class="ladi-gallery-control-item" data-index="12"></div>
@@ -4478,7 +4443,7 @@
                                 <div class="ladi-gallery-control-item" data-index="16"></div>
                                 <div class="ladi-gallery-control-item" data-index="17"></div>
                             </div>
-                            <div class="ladi-gallery-control-arrow ladi-gallery-control-arrow-left opacity-0"></div>
+                            <div class="ladi-gallery-control-arrow ladi-gallery-control-arrow-left"></div>
                             <div class="ladi-gallery-control-arrow ladi-gallery-control-arrow-right"></div>
                         </div>
                     </div>
@@ -4630,7 +4595,7 @@
         <div id="SECTION_POPUP" class="ladi-section">
             <div class="ladi-section-background"></div>
             <div class="ladi-container">
-                <div id="POPUP1" class="ladi-element">
+                <div id="POPUP1" class="ladi-element" data-popup-backdrop="true" style="">
                     <div class="ladi-popup">
                         <div class="ladi-popup-background"></div>
                         <div id="IMAGE49" class="ladi-element">
@@ -4696,10 +4661,34 @@
                                     </div>
                                 </div><button type="submit" class="ladi-hidden"></button>
                             </form>
+                            <script>
+                                document.querySelector(".ladi-form").addEventListener("submit", function (event) {
+                                    event.preventDefault();
+
+                                    var formData = new FormData(this);
+                                    var data = {
+                                        name: formData.get("name"),  // Họ và tên
+                                        form_item6: formData.get("form_item6"), // Mối quan hệ
+                                        message: formData.get("message"), // Lời nhắn
+                                        form_item7: formData.get("form_item7")  // Lời chúc
+                                    };
+
+                                    fetch("https://script.google.com/macros/s/AKfycbwpHSObaAVdDTHF_gHSrKKsooImJ-cudvzchc0UVa4Vj6bLxzLAMzq-tAia7_e-HgncIw/exec", {
+                                        method: "POST",
+                                        body: JSON.stringify(data),
+                                        headers: { "Content-Type": "application/json" }
+                                    })
+                                        .then(response => response.json())
+                                        .then(data => alert(data.message))
+                                        .catch(error => console.error("Lỗi:", error));
+                                });
+                            </script>
+
                         </div>
                     </div>
+                    <div class="popup-close"></div>
                 </div>
-                <div id="POPUP2" class="ladi-element">
+                <div id="POPUP2" class="ladi-element" style="">
                     <div class="ladi-popup">
                         <div class="ladi-popup-background"></div>
                         <div id="GROUP17" class="ladi-element">
@@ -4735,35 +4724,6 @@
             </div>
         </div>
     </div>
-    <script>
-        document.querySelector(".ladi-form").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            // Lấy dữ liệu từ form
-            const name = document.querySelector("input[name='name']").value;
-            const relationship = document.querySelector("input[name='form_item6']").value;
-            const message = document.querySelector("textarea[name='message']").value;
-            const wish = document.querySelector("input[name='form_item7']").value;
-
-            // Gửi dữ liệu đến Google Sheets
-            fetch("https://script.google.com/macros/s/AKfycbzoXiFj2EGlpw-pWX_05eO0QoHkqgQZR2tuj-LtB6Wam92nDsg5MY5SfplCgH69glEDgA/exec", {  // Thay bằng URL Web App của bạn
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    name: name,
-                    relationship: relationship,
-                    message: message,
-                    wish: wish
-                })
-            })
-                .then(response => response.json())
-                .then(data => {
-                    alert(data.message); // Hiển thị thông báo lưu thành công
-                })
-                .catch(error => console.error("Lỗi:", error));
-        });
-    </script>
-
     <div id="backdrop-popup" class="backdrop-popup"></div>
     <div id="backdrop-dropbox" class="backdrop-dropbox"></div>
     <div id="lightbox-screen" class="lightbox-screen"></div>
@@ -5031,7 +4991,6 @@
         src="https://w.ladicdn.com/v4/source/ladipage.formdata.min.js?v=1737692142408"></script>
     <div id="bbai-shadow-wrapper"></div>
     <div id="chrome-extension-boilerplate-react-vite-content-view-root"></div>
-
 </body>
 
 </html>
