@@ -470,9 +470,18 @@
         }
 
         .ladi-container {
+            /* position: relative;
+            margin: 0 auto;
+            height: 100%; */
             position: relative;
             margin: 0 auto;
-            height: 100%;
+            width: 90%;
+            /* Giữ khoảng cách hợp lý trên điện thoại */
+            max-width: 1200px;
+            /* Tránh quá to trên màn hình lớn */
+            height: auto;
+            /* Cho phép chiều cao thay đổi theo nội dung */
+            padding: 10px;
         }
 
         .ladi-overlay {
@@ -488,9 +497,9 @@
             position: absolute;
         }
 
-        @media (hover: hover) {
+        @media (hover: none) {
             .ladi-check-hover {
-                opacity: 0;
+                opacity: 1;
             }
         }
 
@@ -2148,7 +2157,7 @@
         }
 
         #IMAGE2>.ladi-image>.ladi-image-background {
-            background-image: url("https://i.ibb.co/ybTcYSs/blob.jpg");
+            background-image: url("https://scontent.fsgn8-3.fna.fbcdn.net/v/t39.30808-6/474759196_1012074520758939_6199410228704916923_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFru--SZxJuhIn8Hap-Bht5-CMhG81IytH4IyEbzUjK0Ums_JfegT9kAsyJZ6N79_c0LJI51aIk_ndgGZ-RQfK9&_nc_ohc=h4CI6meM464Q7kNvgHqXBk9&_nc_oc=AdiiWQZhduA-PiPYnocVXhtkFMKjTTdwp03BN6MGbfq6Nr_jMbeVtNqMx8_rX6oaR8A&_nc_zt=23&_nc_ht=scontent.fsgn8-3.fna&_nc_gid=Auq2guviqFexGb86OCfzafV&oh=00_AYB_H_QUn_gfB9_Jmtj26vrwTpVdnAL81wLQGNP47ZX0Aw&oe=67AF717D");
 
         }
 
