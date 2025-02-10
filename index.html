@@ -4044,6 +4044,34 @@
 </head>
 
 <body class="">
+    <!-- <form id="weddingForm">
+        <input type="text" name="name" placeholder="Họ và Tên" required>
+        <textarea name="message" placeholder="Lời nhắn" required></textarea>
+        <input type="text" name="form_item6" placeholder="Bạn là gì của Dâu Rể?" required>
+        <input type="text" name="form_item7" placeholder="Lời chúc?" required>
+        <button type="submit">Gửi</button>
+    </form>
+
+    <script>
+        document.getElementById("weddingForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var formData = new FormData(this);
+            var object = {};
+            formData.forEach((value, key) => object[key] = value);
+
+            fetch("https://script.google.com/macros/s/AKfycbyjW2BRzx-r9iZL8tzFdR3VTk94KvOquH3bkcM4naHY2C5SqN3wrgVwWp0NWeo-ljLgDQ/exec", {
+                method: "POST",
+                body: JSON.stringify(object),
+                headers: { "Content-Type": "application/json" }
+            })
+                .then(response => response.text())
+                .then(data => alert(data))  // Hiển thị phản hồi từ server
+                .catch(error => console.error("Lỗi:", error));
+        });
+
+    </script> -->
+
     <div class="ladi-wraper">
         <div id="SECTION1" class="ladi-section">
             <div class="ladi-section-background"></div>
@@ -4701,6 +4729,35 @@
             </div>
         </div>
     </div>
+    <script>
+        document.querySelector(".ladi-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Lấy dữ liệu từ form
+            const name = document.querySelector("input[name='name']").value;
+            const relationship = document.querySelector("input[name='form_item6']").value;
+            const message = document.querySelector("textarea[name='message']").value;
+            const wish = document.querySelector("input[name='form_item7']").value;
+
+            // Gửi dữ liệu đến Google Sheets
+            fetch("https://script.google.com/macros/s/AKfycbzoXiFj2EGlpw-pWX_05eO0QoHkqgQZR2tuj-LtB6Wam92nDsg5MY5SfplCgH69glEDgA/exec", {  // Thay bằng URL Web App của bạn
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: name,
+                    relationship: relationship,
+                    message: message,
+                    wish: wish
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message); // Hiển thị thông báo lưu thành công
+                })
+                .catch(error => console.error("Lỗi:", error));
+        });
+    </script>
+
     <div id="backdrop-popup" class="backdrop-popup"></div>
     <div id="backdrop-dropbox" class="backdrop-dropbox"></div>
     <div id="lightbox-screen" class="lightbox-screen"></div>
@@ -4968,6 +5025,7 @@
         src="https://w.ladicdn.com/v4/source/ladipage.formdata.min.js?v=1737692142408"></script>
     <div id="bbai-shadow-wrapper"></div>
     <div id="chrome-extension-boilerplate-react-vite-content-view-root"></div>
+
 </body>
 
 </html>
