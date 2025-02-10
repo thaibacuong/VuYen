@@ -471,24 +471,27 @@
 
         .ladi-container {
             position: relative;
-            margin: 0;
-            height: 100vh;
-            width: 100vh;
-            /* overflow: hidden; */
+            width: 100vw;
+            /* Chiếm toàn bộ chiều rộng màn hình */
+            min-height: 100vh;
+            /* Đảm bảo luôn đủ chiều cao màn hình */
             overflow-x: hidden;
             /* Ngăn tràn ngang */
             overflow-y: auto;
-            /* Chỉ cho phép cuộn dọc */
-            box-sizing: border-box;
+            /* Cho phép cuộn dọc nếu nội dung dài */
+            display: flex;
+            /* Căn giữa nội dung nếu cần */
+            justify-content: center;
+            align-items: center;
         }
 
-        @media (max-width: 600px) {
-            .ladi-container {
-                width: 100vw;
-                /* Đảm bảo full chiều rộng */
-                height: 100vh;
-                /* Đảm bảo full chiều cao */
-            }
+        .ladi-container {
+            position: relative;
+            margin: 0 auto;
+            height: 100vh;
+            max-width: 100%;
+            /* Tránh vượt quá màn hình */
+            word-wrap: break-word;
         }
 
         .ladi-overlay {
