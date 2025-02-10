@@ -4663,26 +4663,29 @@
                             </form>
                             <script>
                                 document.querySelector(".ladi-form").addEventListener("submit", function (event) {
-                                    event.preventDefault();
+                                    event.preventDefault(); // Ngăn form reload trang
 
                                     var formData = new FormData(this);
                                     var data = {
-                                        name: formData.get("name"),  // Họ và tên
-                                        form_item6: formData.get("form_item6"), // Mối quan hệ
-                                        message: formData.get("message"), // Lời nhắn
-                                        form_item7: formData.get("form_item7")  // Lời chúc
+                                        name: formData.get("name"),
+                                        form_item6: formData.get("form_item6"),
+                                        message: formData.get("message"),
+                                        form_item7: formData.get("form_item7")
                                     };
 
-                                    fetch("https://script.google.com/macros/s/AKfycbwpHSObaAVdDTHF_gHSrKKsooImJ-cudvzchc0UVa4Vj6bLxzLAMzq-tAia7_e-HgncIw/exec", {
+                                    fetch("https://script.google.com/macros/s/AKfycbywQIpjbt-mnP7A3k7FYp99WMVeS271tYdyHjO88cphriZ283sEk-9-7Tglkdn_YUKeGQ/exec", { // Thay bằng URL Web App từ Google Apps Script
                                         method: "POST",
                                         body: JSON.stringify(data),
-                                        headers: { "Content-Type": "application/json" }
+                                        headers: { "Content-Type": "application/json" },
+                                        mode: "no-cors" // Bỏ kiểm tra CORS
                                     })
-                                        .then(response => response.json())
-                                        .then(data => alert(data.message))
-                                        .catch(error => console.error("Lỗi:", error));
+                                        .then(response => console.log("Gửi thành công!"))
+                                        .catch(error => console.error("Lỗi kết nối: ", error));
                                 });
                             </script>
+
+
+
 
                         </div>
                     </div>
